@@ -123,10 +123,6 @@ Works well with:
 - **slop-detector** - References VOICE.md for personalized pattern detection
 - **voice-editor** - Uses VOICE.md to guide rewrites
 
-## Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ## License
 
 MIT License - see [LICENSE](LICENSE)
