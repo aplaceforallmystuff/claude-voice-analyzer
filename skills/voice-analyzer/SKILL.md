@@ -2,12 +2,13 @@
 name: voice-analyzer
 description: Analyze writing samples to create a portable voice profile and style guide. Use when setting up voice-matched AI writing, onboarding to a new project, or refreshing an outdated style guide.
 use_when: User wants to create a voice profile, analyze writing samples for style, set up voice-matched AI writing, or create a VOICE.md style guide.
+user-invocable: true
 ---
 
 <objective>
 Extract voice patterns from writing samples and generate a comprehensive, portable style guide (VOICE.md).
 
-The output becomes infrastructure - a reference document used every time you work with AI to maintain your authentic voice instead of producing generic content.
+The output becomes infrastructure -- a reference document used every time you work with AI to maintain your authentic voice instead of producing generic content.
 </objective>
 
 <quick_start>
@@ -303,7 +304,7 @@ The voice analysis is complete when:
 </success_criteria>
 
 <core_principle>
-You're not trying to achieve perfection on attempt one. You're building infrastructure that improves with use. The first guide will be good but not perfect—that's normal. Each piece written with this guide makes it more precise.
+You're not trying to achieve perfection on attempt one. You're building infrastructure that improves with use. The first guide will be good but not perfect -- that's normal. Each piece written with this guide makes it more precise.
 
 Voice doesn't live in first drafts. It lives in editing choices. The guide gives AI direction; your editing gives the work your actual voice.
 </core_principle>
