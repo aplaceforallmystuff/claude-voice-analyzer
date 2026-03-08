@@ -39,7 +39,13 @@ Provide 3-5 writing samples where your voice feels strongest. The skill:
 
 ## Installation
 
-### Option 1: Copy to your Claude Code skills directory
+### Option 1: Skills CLI
+
+```bash
+npx skills add aplaceforallmystuff/claude-voice-analyzer
+```
+
+### Option 2: Copy to your Claude Code skills directory
 
 ```bash
 # Clone the repository
@@ -49,13 +55,13 @@ git clone https://github.com/aplaceforallmystuff/claude-voice-analyzer.git
 cp -r claude-voice-analyzer/skills/voice-analyzer ~/.claude/skills/
 ```
 
-### Option 2: Clone directly to skills directory
+### Option 3: Clone directly to skills directory
 
 ```bash
 git clone https://github.com/aplaceforallmystuff/claude-voice-analyzer.git ~/.claude/skills/voice-analyzer
 ```
 
-### Option 3: Manual installation
+### Option 4: Manual installation
 
 1. Create the directory: `mkdir -p ~/.claude/skills/voice-analyzer`
 2. Download [SKILL.md](skills/voice-analyzer/SKILL.md) to that directory
@@ -119,9 +125,11 @@ The skill generates a comprehensive style guide including:
 
 ## Related Skills
 
-Works well with:
-- **slop-detector** - References VOICE.md for personalized pattern detection
-- **voice-editor** - Uses VOICE.md to guide rewrites
+Part of the [aplaceforallmystuff](https://skills.sh/aplaceforallmystuff) skills collection:
+
+- **[voice-editor](https://github.com/aplaceforallmystuff/claude-voice-editor)** — Uses the VOICE.md this skill generates to guide rewrites
+- **[the-antislop](https://github.com/aplaceforallmystuff/the-antislop)** — Detect and fix AI writing patterns
+- **[slop-detector](https://github.com/aplaceforallmystuff/claude-slop-detector)** — References VOICE.md for personalized pattern detection
 
 ## License
 
