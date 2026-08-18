@@ -25,7 +25,7 @@ This skill extracts your voice patterns and creates a reusable style guide.
 ```bash
 # In Claude Code:
 /plugin marketplace add aplaceforallmystuff/marketplace
-/plugin install claude-voice-analyzer@jim-christian
+/plugin install claude-voice-analyzer@aplaceforallmystuff
 ```
 
 <details>
