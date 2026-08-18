@@ -1,6 +1,21 @@
 {
   "name": "claude-voice-analyzer",
+  "displayName": "Voice Analyzer",
   "description": "Create portable voice profiles from writing samples.",
   "version": "1.0.0",
-  "author": { "name": "Jim Christian", "email": "hello@jimchristian.net" }
+  "author": {
+    "name": "Jim Christian",
+    "email": "hello@jimchristian.net",
+    "url": "https://jimchristian.net"
+  },
+  "homepage": "https://github.com/aplaceforallmystuff/claude-voice-analyzer#readme",
+  "repository": "https://github.com/aplaceforallmystuff/claude-voice-analyzer",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "voice",
+    "style-guide",
+    "profile",
+    "onboarding"
+  ]
 }

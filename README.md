@@ -1,11 +1,15 @@
-# Claude Voice Analyzer
+# Voice Analyzer
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue)](https://claude.ai)
+*Voice profiles that let AI produce content readers recognize as authentically yours.*
 
-A Claude Code skill for creating portable voice profiles from writing samples.
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-6C5CE7)
 
-## The Problem
+![Voice Analyzer](docs/images/architecture-diagram.png)
+
+A Claude Code skill for creating portable voice profiles from writing samples. It extracts your voice patterns from samples you provide and generates a reusable VOICE.md style guide.
+
+## Why
 
 AI writing often sounds generic because it has no reference for your actual voice. This results in:
 
@@ -16,7 +20,35 @@ AI writing often sounds generic because it has no reference for your actual voic
 
 This skill extracts your voice patterns and creates a reusable style guide.
 
-## How It Works
+## Install
+
+```bash
+# In Claude Code:
+/plugin marketplace add aplaceforallmystuff/marketplace
+/plugin install claude-voice-analyzer@jim-christian
+```
+
+<details>
+<summary>Manual install (without the marketplace)</summary>
+
+```bash
+# Clone the repository
+git clone https://github.com/aplaceforallmystuff/claude-voice-analyzer.git
+
+# Copy to your Claude Code skills directory
+cp -r claude-voice-analyzer/skills/voice-analyzer ~/.claude/skills/
+```
+</details>
+
+## Use cases
+
+- Use it when you set up voice-matched AI writing and need a reference the AI can follow every time.
+- Use it when you onboard to a new project and want the AI to write in your voice from day one.
+- Use it when an existing style guide is outdated and needs a refresh from recent samples.
+- Use it when AI drafts keep sounding generic and you want a forbidden-phrases list tuned to your anti-patterns.
+- Use it when you maintain separate voices (professional, casual, technical) and need a profile for each.
+
+## How it works
 
 Provide 3-5 writing samples where your voice feels strongest. The skill:
 
@@ -26,7 +58,7 @@ Provide 3-5 writing samples where your voice feels strongest. The skill:
 4. **Creates** a forbidden phrases list specific to your anti-patterns
 5. **Provides** testing prompts to validate the guide
 
-## What It Analyzes
+### What it analyzes
 
 | Dimension | What It Examines |
 |-----------|------------------|
@@ -37,45 +69,7 @@ Provide 3-5 writing samples where your voice feels strongest. The skill:
 | **Structure** | Lists vs prose, headers, formatting |
 | **Opinion** | How you state views, qualify claims, express authority |
 
-## Installation
-
-### Option 1: Skills CLI
-
-```bash
-npx skills add aplaceforallmystuff/claude-voice-analyzer
-```
-
-### Option 2: Copy to your Claude Code skills directory
-
-```bash
-# Clone the repository
-git clone https://github.com/aplaceforallmystuff/claude-voice-analyzer.git
-
-# Copy to your Claude Code skills directory
-cp -r claude-voice-analyzer/skills/voice-analyzer ~/.claude/skills/
-```
-
-### Option 3: Clone directly to skills directory
-
-```bash
-git clone https://github.com/aplaceforallmystuff/claude-voice-analyzer.git ~/.claude/skills/voice-analyzer
-```
-
-### Option 4: Manual installation
-
-1. Create the directory: `mkdir -p ~/.claude/skills/voice-analyzer`
-2. Download [SKILL.md](skills/voice-analyzer/SKILL.md) to that directory
-
-## Usage
-
-The skill activates when you ask Claude to:
-
-- "Analyze my writing voice"
-- "Create a voice profile from these samples"
-- "Generate a VOICE.md for my writing style"
-- "Help me set up voice-matched AI writing"
-
-### Sample Selection
+### Sample selection
 
 **Good samples:**
 - Newsletter issues you're proud of
@@ -115,13 +109,39 @@ The skill generates a comprehensive style guide including:
 [Prompts to validate the guide works]
 ```
 
-## Where to Save VOICE.md
+### Where to save VOICE.md
 
 | Location | Scope |
 |----------|-------|
 | `./.claude/VOICE.md` | This project only |
 | `~/.claude/voice/VOICE.md` | All projects |
 | `~/.claude/voice/[context]-voice.md` | Multiple profiles (professional, casual) |
+
+## Example
+
+Ask Claude to analyze your writing and point it at your samples:
+
+> Analyze my writing voice from these three newsletter issues and generate a VOICE.md.
+
+The skill reads the samples, works through each dimension, and returns a profile. Illustrative excerpt of the generated VOICE.md:
+
+```markdown
+# Voice Profile: Jim
+Generated: 2026-08-18
+Based on: 3 writing samples (4,200 words)
+
+## Voice Summary
+Direct and conversational. Short sentences for emphasis, longer ones
+to carry an argument. Dry humor, no corporate hedging.
+
+## The Forbidden List
+### Never Use (These kill your voice)
+- "It's worth noting that"
+- "In today's digital landscape"
+- "Leverage" as a verb
+```
+
+*(Output above is illustrative — actual profiles reflect your own samples.)*
 
 ## Related Skills
 
@@ -133,8 +153,4 @@ Part of the [aplaceforallmystuff](https://skills.sh/aplaceforallmystuff) skills 
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
-
----
-
-**The goal: Voice profiles that let AI produce content readers recognize as authentically yours.**
+MIT — see [LICENSE](LICENSE).
