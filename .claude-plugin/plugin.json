@@ -1,0 +1,6 @@
+{
+  "name": "claude-voice-analyzer",
+  "description": "Create portable voice profiles from writing samples.",
+  "version": "1.0.0",
+  "author": { "name": "Jim Christian", "email": "hello@jimchristian.net" }
+}
